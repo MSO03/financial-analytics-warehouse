@@ -1,7 +1,7 @@
 import yfinance as yf
 import pandas as pd
 
-TICKERS = ["VT", "IJS"]
+TICKERS = ["VT", "IJS","VXUS","SPY"]
 
 def fetch_data():
 
