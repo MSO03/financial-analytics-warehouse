@@ -8,12 +8,12 @@ CREATE SCHEMA IF NOT EXISTS MARTS;
 
 USE SCHEMA RAW;
 
-CREATE TABLE IF NOT EXISTS PRICES (
-    TRADE_DATE DATE,
-    TICKER STRING,
-    OPEN FLOAT,
-    HIGH FLOAT,
-    LOW FLOAT,
-    CLOSE FLOAT,
-    VOLUME NUMBER
+CREATE TABLE raw.prices (
+    trade_date DATE,
+    ticker STRING,
+    open FLOAT,
+    high FLOAT,
+    low FLOAT,
+    close FLOAT,
+    volume NUMBER
 );
