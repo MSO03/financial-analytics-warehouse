@@ -16,25 +16,25 @@ def fetch_data():
         .stack(level=0)
         .reset_index()
         .rename(columns={
-            "Date": "date",
-            "Ticker": "ticker",
-            "Open": "open",
-            "High": "high",
-            "Low": "low",
-            "Close": "close",
-            "Volume": "volume"
+            "Date": "TRADE_DATE",
+            "Ticker": "TICKER",
+            "Open": "OPEN",
+            "High": "HIGH",
+            "Low": "LOW",
+            "Close": "CLOSE",
+            "Volume": "VOLUME"
         })
     )
 
     return df[
         [
-            "date",
-            "ticker",
-            "open",
-            "high",
-            "low",
-            "close",
-            "volume"
+            "TRADE_DATE",
+            "TICKER",
+            "OPEN",
+            "HIGH",
+            "LOW",
+            "CLOSE",
+            "VOLUME"
         ]
     ]
 
