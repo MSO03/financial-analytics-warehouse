@@ -21,7 +21,7 @@ def get_connection():
 def main():
 	df = fetch_data ()
 
-	df["TRADE_DATE"] = pd.to_datetime(df["TRADE_DATE"]).dt.date 
+	df["trade_date"] = pd.to_datetime(df["trade_date"]).dt.date 
 
 	conn = get_connection()
 	success, chunks, rows, output = write_pandas(
@@ -29,7 +29,8 @@ def main():
 		df,
 		table_name="PRICES",
 		database="FINANCIAL_ANALYTICS",
-		schema="RAW"
+		schema="RAW",
+		quote_identifiers=False
 	)
 
 	print(f"success = {success}, chunks={chunks}, rows={rows}, output={output}")
