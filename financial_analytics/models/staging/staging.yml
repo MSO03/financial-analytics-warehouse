@@ -4,11 +4,11 @@ models:
   - name: stg_prices
     columns:
       - name: trade_date
-        tests:
+        data_tests:
           - not_null
       - name: ticker
-        tests:
+        data_tests:
           - not_null
       - name: close
-        tests:
+        data_tests:
           - not_null
