@@ -46,5 +46,5 @@ def main():
     df.to_csv("raw_prices.csv", index=False)
 
 
-
-main()
+if __name__ == '__main__':
+        main()
