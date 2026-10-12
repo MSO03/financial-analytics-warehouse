@@ -2,6 +2,7 @@ version: 2
 
 sources:
   - name: raw
+    description: raw data from the python ingestion
     database: financial_analytics
     schema: raw #optional, name: is the same as this
     tables:
