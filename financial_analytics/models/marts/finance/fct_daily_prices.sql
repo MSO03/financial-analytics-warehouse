@@ -1,5 +1,6 @@
 SELECT
     ticker.Ticker_id,
+    date.date_id,
     stg.open,
     stg.high,
     stg.low,
@@ -7,4 +8,6 @@ SELECT
     stg.volume
 FROM {{ ref('stg_prices') }} as stg
 LEFT JOIN {{ ref('dim_ticker') }} as ticker
-ON ticker.Ticker_id = stg.ticker
+ON ticker.ticker = stg.ticker
+LEFT JOIN {{ ref('dim_date') }} as date 
+ON date.trade_date = stg.trade_date
