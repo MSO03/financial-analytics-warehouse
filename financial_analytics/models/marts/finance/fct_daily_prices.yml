@@ -1,0 +1,9 @@
+models:
+  - name: fct_daily_prices
+    columns:
+     - name: Ticker_id
+       data_tests:
+         - relationships:
+             arguments:
+               to: ref('dim_ticker')
+               field: Ticker_id
