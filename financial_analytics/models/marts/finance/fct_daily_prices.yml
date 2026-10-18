@@ -3,12 +3,14 @@ models:
     columns:
      - name: Ticker_id
        data_tests:
+         - unique
          - relationships:
              arguments:
                to: ref('dim_ticker')
                field: Ticker_id
      - name: date_id 
        data_tests:
+         - unique
          - relationships:
              arguments:
                to: ref('dim_date')
