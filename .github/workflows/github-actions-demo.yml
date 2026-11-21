@@ -6,8 +6,8 @@ run-name: ${{ github.actor }} is testing out GitHub Actions 🚀
 on: [push]
 
 jobs:
-    Explore-GitHub-Actions:
-          runs-on: ubuntu-latest
+  Explore-GitHub-Actions:
+    runs-on: ubuntu-latest
 
-              steps:
-                      - run: echo "🎉 The job was automatically  by a ${{ github.event_name }} event."
+    steps:
+      - run: echo "🎉 The job was automatically  by a ${{ github.event_name }} event."
