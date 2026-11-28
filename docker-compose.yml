@@ -1,0 +1,16 @@
+services: 
+  ingestion:
+    build:
+      context: ingestion/  
+      dockerfile: ingestion/dockerfile
+    container_name: etl-ingestion
+    env-file:
+      - .env
+    
+
+  transformation:
+    build:
+      context: financial_analytics/  
+      dockerfile: financial_analytics/dockerfile
+    container_name: etl-transformation
+
