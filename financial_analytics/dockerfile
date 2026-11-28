@@ -1,8 +1,9 @@
 FROM python:3.12.8
 WORKDIR /app
 
-RUN pip install --no-cache-dir -r dbt-snowflake
-
 COPY . .
+
+RUN pip install --no-cache-dir dbt-snowflake
+
 
 CMD ["dbt debug"]
